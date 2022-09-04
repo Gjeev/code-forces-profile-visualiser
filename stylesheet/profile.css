@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 20px;
+}
+.page {
+    width:100vw;
+    height:100vh;
+    position: relative;
+}
+.profile
+{
+    border: solid 1px grey;
+    width:80%;
+    margin: 1em auto;
+    padding: 1em;
+    text-align: center;
+}
+table,th , td {
+    margin: auto;
+    border: solid 1px grey;
+    border-collapse: collapse;
+    background-color:rgb(224, 220, 220);
+}
+th, td {
+    padding: 0.5em;
+}
+
+handle
+{
+    font-size: larger;
+    color: red;
+    
+}
