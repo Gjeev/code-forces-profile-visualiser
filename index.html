@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .parent {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+      }
+      .child {
+        height: 25vh;
+        width: 30vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 1.5px black;
+        padding: 1em;
+      }
+      .submitBtn {
+        margin-top: 1em;
+        padding: 10px;
+      }
+      #input {
+        width: 50%;
+        height: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <form>
+          <label for="username">Enter User Name:</label>
+          <input type="text" required id="input"/><br />
+          <button class="submitBtn" type="submit">Submit</button>
+        </form>
+      </div>
+      <script>
+        const input = document.getElementById("input");
+        const btn = document.querySelector(".submitBtn");
+        
+        input.addEventListener('input',(e) => {
+            let username = e.target.value;
+            window.localStorage.setItem('username',username);
+        });
+        btn.addEventListener('click', () =>
+        {
+            window.open("./profile.html");
+        });
+
+      </script>
+    </body>
+</html>
